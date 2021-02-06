@@ -335,7 +335,7 @@ class HuntMainActivity : AppCompatActivity() {
                         Toast.makeText(this@HuntMainActivity, R.string.geofences_not_added,
                             Toast.LENGTH_SHORT).show()
                         if ((it.message != null)) {
-                            Log.w(TAG, it.message)
+                            Log.w(TAG, it.message!!)
                         }
                     }
                 }
