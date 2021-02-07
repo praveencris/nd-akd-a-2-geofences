@@ -127,7 +127,7 @@ class HuntMainActivity : AppCompatActivity() {
         // DONE: Step 5 add code to handle the result of the user's permission
         Log.d(TAG, "onRequestPermissionResult")
 
-        if (grantResults.isNotEmpty() ||
+        if (grantResults.isEmpty() ||
                 grantResults[LOCATION_PERMISSION_INDEX] == PackageManager.PERMISSION_DENIED ||
                 (requestCode == REQUEST_FOREGROUND_AND_BACKGROUND_PERMISSION_RESULT_CODE && grantResults[BACKGROUND_LOCATION_PERMISSION_INDEX] == PackageManager.PERMISSION_DENIED)) {
             Snackbar.make(
@@ -203,7 +203,7 @@ class HuntMainActivity : AppCompatActivity() {
     /*
      *  Requests ACCESS_FINE_LOCATION and (on Android 10+ (Q) ACCESS_BACKGROUND_LOCATION.
      */
-    @TargetApi(29)
+    @SuppressLint("InlinedApi")
     private fun requestForegroundAndBackgroundLocationPermissions() {
         // DONE: Step 4 add code to request foreground and background permissions
         if (foregroundAndBackgroundLocationPermissionApproved())
