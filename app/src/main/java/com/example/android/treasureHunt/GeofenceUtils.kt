@@ -58,7 +58,7 @@ internal object GeofencingConstants {
             "golden_gate_bridge",
             R.string.golden_gate_bridge_hint,
             R.string.golden_gate_bridge_location,
-            LatLng(37.819927, -122.478256)),
+            LatLng(28.465422491800215, 77.29739288462409)),
 
         LandmarkDataObject(
             "ferry_building",
@@ -80,6 +80,6 @@ internal object GeofencingConstants {
     )
 
     val NUM_LANDMARKS = LANDMARK_DATA.size
-    const val GEOFENCE_RADIUS_IN_METERS = 100f
+    const val GEOFENCE_RADIUS_IN_METERS = 20f
     const val EXTRA_GEOFENCE_INDEX = "GEOFENCE_INDEX"
 }
